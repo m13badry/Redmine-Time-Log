@@ -95,6 +95,7 @@ Namespace Redmine
                 Dim param As New System.Collections.Specialized.NameValueCollection
                 Try
                     param.Add("key", My.Settings.ApiKey)
+                    _objUploadManager.Timeout = 99999
                     strXMLOutput = _objUploadManager.SendData(strUrl, UploadManager.HttpMethod.GET, param)
                     _activities.Clear()
                     objXMLDoc.LoadXml(strXMLOutput)

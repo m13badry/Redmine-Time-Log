@@ -43,27 +43,42 @@ Public Class frmMain
 
     Sub New()
         CheckForIllegalCrossThreadCalls = False
-
         ' This call is required by the Windows Form Designer.
         InitializeComponent()
-        Dim objSettings As New frmSettings
-        If objSettings.ShowDialog() = Windows.Forms.DialogResult.OK Then
-            listActivites()
-            _idleCheck.Start()
-        Else
-            Application.Exit()
-            End
-        End If
     End Sub
 
+
+    Private Sub frmMain_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Try
+            Dim objSettings As New frmSettings
+            If objSettings.ShowDialog() = Windows.Forms.DialogResult.OK Then
+                listActivites()
+                _idleCheck.Start()
+            Else
+                Application.Exit()
+                'end
+            End If
+        Catch ex As Exception
+            MessageBox.Show(String.Format("Message: {1}{0}StackTrace: {2}", vbCrLf, ex.Message, ex.StackTrace), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            _close = True
+            Application.Exit()
+        End Try
+    End Sub
+
+
     Private Sub listActivites()
+        Try
+            Dim obj As New Redmine.Enumerations.Activities()
 
-        Dim obj As New Redmine.Enumerations.Activities()
-
-        'cmbActivity.Items.Clear()
-        cmbActivity.DataSource = obj.Activites
-        cmbActivity.DisplayMember = "Name"
-        cmbActivity.ValueMember = "ID"
+            'cmbActivity.Items.Clear()
+            cmbActivity.DataSource = obj.Activites
+            cmbActivity.DisplayMember = "Name"
+            cmbActivity.ValueMember = "ID"
+        Catch ex As Exception
+            MessageBox.Show(String.Format("Source:{3}{0}Message: {1}{0}StackTrace: {2}", vbCrLf, ex.Message, ex.StackTrace, ex.Source), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            _close = True
+            Application.Exit()
+        End Try
     End Sub
 
 

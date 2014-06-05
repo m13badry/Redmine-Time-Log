@@ -21,6 +21,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_A837B50C2EFC44B89A547519F1E20755"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_E4A03B23905F4234AC234EAC6DE0F7E0"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -29,6 +35,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_10821610814A42138335107B98DFDE32"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_A837B50C2EFC44B89A547519F1E20755"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -136,6 +148,37 @@
         }
         "File"
         {
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A837B50C2EFC44B89A547519F1E20755"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:ClientWebManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_A837B50C2EFC44B89A547519F1E20755"
+                    {
+                    "Name" = "8:ClientWebManager.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\ClientWebManager.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_458FE6CD194A47FBACF5F08A19DAECD6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E4A03B23905F4234AC234EAC6DE0F7E0"
             {
             "SourcePath" = "8:..\\Redmine\\favico.ico"
@@ -212,14 +255,14 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Redmine Time Log"
-        "ProductCode" = "8:{FA1E2311-CD3C-48B7-AFB9-FB300D9F12B3}"
-        "PackageCode" = "8:{9E0F6513-46DB-4351-979D-80A2D1B7799A}"
+        "ProductCode" = "8:{BC25A4BD-9584-43AC-8718-205368C2E93B}"
+        "PackageCode" = "8:{14839744-6631-4440-8B10-390F569AEC39}"
         "UpgradeCode" = "8:{612813DE-FBAC-4AB4-87D5-D9DE5FBBE086}"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.1.0"
+        "ProductVersion" = "8:1.2.0"
         "Manufacturer" = "8:Egynile"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

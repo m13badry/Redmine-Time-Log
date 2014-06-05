@@ -105,6 +105,7 @@ Namespace Redmine
                         _activities.Add(entry)
                     Loop
                 Catch ex As Exception
+                    Throw ex
 
                 End Try
             End Sub
